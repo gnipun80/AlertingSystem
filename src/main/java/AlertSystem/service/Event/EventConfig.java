@@ -3,51 +3,42 @@ package AlertSystem.service.Event;
 import AlertSystem.service.Alert.AlertConfig;
 import AlertSystem.service.Dispatcher.DispatchConfig;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class EventConfig {
     private String type;
-    private List<AlertSystem.service.Event.EventInfo> EventInfo;
+    private List<EventInfo> events;
     private AlertConfig alertConfig;
     private List<DispatchConfig> dispatchConfigList;
+    public EventConfig(String type, AlertConfig alertConfig, List<DispatchConfig> dispatchConfigList) {
+        this.type = type;
+        this.alertConfig = alertConfig;
+        this.dispatchConfigList = dispatchConfigList;
+        this.events = new ArrayList<>();
+    }
 
     public String getType() {
         return type;
     }
 
-    public void setType(String type) {
-        this.type = type;
-    }
-
-    public List<AlertSystem.service.Event.EventInfo> getEventInfo() {
-        return EventInfo;
-    }
-
-    public void setEventInfo(List<AlertSystem.service.Event.EventInfo> eventInfo) {
-        EventInfo = eventInfo;
+    public List<EventInfo> getEvents() {
+        return events;
     }
 
     public AlertConfig getAlertConfig() {
         return alertConfig;
     }
 
-    public void setAlertConfig(AlertConfig alertConfig) {
-        this.alertConfig = alertConfig;
-    }
-
     public List<DispatchConfig> getDispatchConfigList() {
         return dispatchConfigList;
     }
 
-    public void setDispatchConfigList(List<DispatchConfig> dispatchConfigList) {
-        this.dispatchConfigList = dispatchConfigList;
-    }
-
     public void addEvent(EventInfo event) {
-        EventInfo.add(event);
-        boolean isThresholdBreach = alertConfig.process(EventInfo);
+        events.add(event);
+        boolean isThresholdBreach = alertConfig.process(events);
 
-        if(true == isThresholdBreach) {
+        if(isThresholdBreach) {
             for(DispatchConfig d : dispatchConfigList) {
                 d.dispatch();
             }

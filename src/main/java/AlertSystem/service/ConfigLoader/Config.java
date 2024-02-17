@@ -7,4 +7,16 @@ public class Config {
     private String eventType;
     private AlertConfig alertConfig;
     private List<DispatchStrategy> dispatchStrategyList;
+    public String getClient() {
+        return client;
+    }
+    public String getEventType() {
+        return eventType;
+    }
+    public AlertConfig getAlertConfig() {
+        return alertConfig;
+    }
+    public List<DispatchStrategy> getDispatchStrategyList() {
+        return dispatchStrategyList;
+    }
 }

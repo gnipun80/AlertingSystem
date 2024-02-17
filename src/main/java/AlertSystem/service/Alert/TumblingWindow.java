@@ -4,10 +4,15 @@ import java.time.LocalDateTime;
 import java.time.ZoneOffset;
 import java.util.List;
 
+import AlertSystem.Enums.ConfigType;
 import AlertSystem.service.Event.EventInfo;
 
 public class TumblingWindow extends AlertConfig{
     private int windowSizeInSecs;
+    public TumblingWindow(ConfigType type, int threshold, int windowSizeInSecs) {
+        super(type, threshold);
+        this.windowSizeInSecs = windowSizeInSecs;
+    }
 
     @Override
     public boolean process(List<EventInfo> eventList) {
