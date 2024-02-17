@@ -4,6 +4,8 @@ import java.time.LocalDateTime;
 import java.time.ZoneOffset;
 import java.util.List;
 
+import org.w3c.dom.events.Event;
+
 import AlertSystem.Enums.ConfigType;
 import AlertSystem.service.Event.EventInfo;
 
@@ -16,22 +18,14 @@ public class TumblingWindow extends AlertConfig{
 
     @Override
     public boolean process(List<EventInfo> eventList) {
-        // Get current time
-        LocalDateTime currentTime = LocalDateTime.now();
-
-        // Calculate start time of the current window
-        long windowStart = currentTime.minusSeconds(currentTime.getSecond())
-                                               .minusNanos(currentTime.getNano())
-                                               .minusMinutes(currentTime.getMinute() % (windowSizeInSecs / 60))
-                                               .toEpochSecond(ZoneOffset.UTC);
-        int eventCount = eventList.size();
-
-        if(eventCount > this.threshold) {
-            int lastEventTime = eventList.get(eventCount - 1 - threshold).getEventTime();
-            if(lastEventTime >= windowStart) { // threshold breach
-                return true;
+        EventInfo lastEvent = eventList.get(eventList.size() - 1);
+        int lastEventWindowIndex = (int) ((lastEvent.getEventTime() % (24 * 3600)) / windowSizeInSecs), count = 1;
+        for (EventInfo event : eventList) {
+            int currWindowIndex = (int) ((event.getEventTime() % (24 * 3600)) / windowSizeInSecs);
+            if (event != lastEvent && currWindowIndex == lastEventWindowIndex) {
+                count++;
             }
         }
-        return false;
+        return count >= threshold;
     }
 }
