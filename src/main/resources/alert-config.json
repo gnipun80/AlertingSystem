@@ -9,10 +9,10 @@
         },
         "dispatchStrategyList": [{
             "type": "CONSOLE",
-            "message" : "issue in payment tumbling" 
+            "message" : "issue in payment - tumbling" 
         }, {
             "type": "EMAIL",
-            "subject" : "payment exception threshold breached tumbling"
+            "subject" : "payment exception threshold breached - tumbling"
         }]
     },{
         "client": "X",
@@ -24,10 +24,10 @@
         },
         "dispatchStrategyList": [{ 
             "type": "CONSOLE",
-            "message" : "issue in user service" 
+            "message" : "issue in user service - simple" 
         }, {
             "type": "EMAIL",
-            "subject" : "payment exception threshold breached"
+            "subject" : "payment exception threshold breached - simple"
         }]
     },{
         "client": "Y",
@@ -39,10 +39,10 @@
         },
         "dispatchStrategyList": [{
             "type": "CONSOLE",
-            "message" : "issue in payment nipun nanga" 
+            "message" : "issue in payment - sliding window" 
         }, {
             "type": "EMAIL",
-            "subject" : "payment exception threshold breached"
+            "subject" : "payment exception threshold breached - sliding window"
         }]
     }]
 }
