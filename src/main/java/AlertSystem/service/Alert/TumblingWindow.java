@@ -1,10 +1,6 @@
 package AlertSystem.service.Alert;
 
-import java.time.LocalDateTime;
-import java.time.ZoneOffset;
 import java.util.List;
-
-import org.w3c.dom.events.Event;
 
 import AlertSystem.Enums.ConfigType;
 import AlertSystem.service.Event.EventInfo;
