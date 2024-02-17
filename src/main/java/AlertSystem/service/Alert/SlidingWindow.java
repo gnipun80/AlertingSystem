@@ -14,7 +14,7 @@ public class SlidingWindow extends AlertConfig{
     
     @Override
     public boolean process(List<EventInfo> eventList) {
-        if (eventList.size() < threshold) {
+        if (eventList.size() < threshold || threshold == 0) {
             return false;
         }
 

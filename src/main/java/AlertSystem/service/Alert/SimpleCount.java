@@ -11,6 +11,6 @@ public class SimpleCount extends AlertConfig {
     }
     @Override
     public boolean process(List<EventInfo> eventList) {
-        return eventList.size() > threshold;
+        return eventList.size() >= threshold;
     }
 }

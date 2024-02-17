@@ -19,6 +19,9 @@ public class TumblingWindow extends AlertConfig{
 
     @Override
     public boolean process(List<EventInfo> eventList) {
+        if(eventList.size() < threshold) {
+            return false;
+        }
         EventInfo lastEvent = eventList.get(eventList.size() - 1);
         Instant instant = Instant.ofEpochSecond(lastEvent.getEventTime());
         ZonedDateTime dateTime = instant.atZone(ZoneId.of("GMT"));
