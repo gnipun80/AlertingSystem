@@ -1,13 +1,13 @@
 package AlertSystem.service;
 
 public class EventInfo {
-    private int lastEventTime;
+    private int eventTime;
 
-    public int getLastEventTime() {
-        return lastEventTime;
+    public int getEventTime() {
+        return eventTime;
     }
 
-    public void setLastEventTime(int lastEventTime) {
-        this.lastEventTime = lastEventTime;
+    public void setEventTime(int lastEventTime) {
+        this.eventTime = eventTime;
     }
 }

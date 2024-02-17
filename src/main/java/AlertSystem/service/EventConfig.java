@@ -42,4 +42,15 @@ public class EventConfig {
     public void setDispatchConfigList(List<DispatchConfig> dispatchConfigList) {
         this.dispatchConfigList = dispatchConfigList;
     }
+
+    public void addEvent(EventInfo event) {
+        EventInfo.add(event);
+        bool isThresholdBreach = alertConfig.process(EventInfo);
+
+        if(true == isThresholdBreach) {
+            for(DispatchConfig d : dispatchConfigList) {
+                d.dispatch();
+            }
+        }
+    }
 }
