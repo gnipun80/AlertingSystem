@@ -35,11 +35,11 @@
         "alertConfig": {
             "type": "SLIDING_WINDOW", 
             "count": 10,
-            "windowSizeInSecs": 600
+            "windowSizeInSecs": 1200
         },
         "dispatchStrategyList": [{
             "type": "CONSOLE",
-            "message" : "issue in payment" 
+            "message" : "issue in payment nipun nanga" 
         }, {
             "type": "EMAIL",
             "subject" : "payment exception threshold breached"

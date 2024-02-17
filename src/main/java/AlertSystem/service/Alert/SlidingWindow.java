@@ -15,9 +15,12 @@ public class SlidingWindow extends AlertConfig{
     
     @Override
     public boolean process(List<EventInfo> eventList) {
-        // Check if the current window has passed
-        
-        
-        return false;
+        if (eventList.size() < threshold) {
+            return false;
+        }
+
+        EventInfo lastEvent = eventList.get(eventList.size() - 1);
+        EventInfo firstEvent = eventList.get(eventList.size() - threshold);
+        return lastEvent.getEventTime() - firstEvent.getEventTime() <= windowSizeInSecs;
     }
 }
