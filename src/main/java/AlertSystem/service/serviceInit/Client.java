@@ -1,5 +1,6 @@
 package AlertSystem.service.serviceInit;
 
+import java.util.HashMap;
 import java.util.Map;
 import AlertSystem.service.Event.*; // Import the EventConfig class
 
@@ -12,12 +13,8 @@ public class Client {
     }
 
     public Client(String name) {
-        this(null, null);
-    }
-
-    public Client(String name, Map<String, EventConfig> eventConfigMap) {
         this.name = name;
-        this.eventConfigMap = eventConfigMap;
+        this.eventConfigMap = new HashMap<>();
     }
 
     public String getName() {

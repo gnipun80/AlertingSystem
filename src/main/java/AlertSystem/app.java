@@ -11,9 +11,9 @@ import AlertSystem.service.serviceInit.ServiceInit;
 public class App {
     public static void main(String[] args) {
         try {
-            Service service = ServiceInit.initService("src/main/resources/config.json");
+            Service service = ServiceInit.initService("src/main/resources/alert-config.json");
             if(service != null) {
-                AllEvents allEvents = EventLoader.loadEvents("src/main/resources/events.json");
+                AllEvents allEvents = EventLoader.loadEvents("src/main/resources/incoming-events.json");
                 if(allEvents != null) {
                     for (EventInfo event : allEvents.getEventList()) {
                         service.addEvent(event);

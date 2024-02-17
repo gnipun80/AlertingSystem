@@ -14,6 +14,7 @@ public class ConfigLoader {
             ConfigClass config = gson.fromJson(jsonContent, ConfigClass.class);
             return config;
         } catch (IOException e) {
+            System.err.println("Hello bitch");
             e.printStackTrace();
             return null;
         }

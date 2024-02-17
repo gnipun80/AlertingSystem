@@ -24,6 +24,7 @@ import AlertSystem.service.Event.EventConfig;
 public class ServiceInit {
     public static Service initService(String filePath) throws IOException{
         ConfigClass config = ConfigLoader.loadConfig(filePath);
+        System.err.println(config);
         List<Config> configList = config.getConfigList();
         Map<String, Client> clientMap = new HashMap<String, Client>();
 

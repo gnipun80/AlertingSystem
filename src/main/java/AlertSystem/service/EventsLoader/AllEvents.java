@@ -5,8 +5,8 @@ import java.util.List;
 import AlertSystem.service.Event.EventInfo;
 
 public class AllEvents {
-    List<EventInfo> eventList;
+    List<EventInfo> allEvents;
     public List<EventInfo> getEventList() {
-        return eventList;
+        return allEvents;
     }
 }

@@ -18,7 +18,7 @@
         "client": "X",
         "eventType": "USERSERVICE_EXCEPTION", 
         "alertConfig": {
-            "type": "SLIDING_WINDOW", 
+            "type": "SIMPLE_COUNT", 
             "count": 10,
             "windowSizeInSecs": 10
         },
