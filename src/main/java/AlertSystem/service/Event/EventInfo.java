@@ -7,7 +7,7 @@ public class EventInfo {
         return eventTime;
     }
 
-    public void setEventTime(int lastEventTime) {
-        this.eventTime = eventTime;
+    public void setEventTime(int ingestTimeStamp) {
+        this.eventTime = ingestTimeStamp;
     }
 }
