@@ -1,7 +1,10 @@
 package AlertSystem.service.Dispatcher;
 
+import java.util.logging.Logger;
+
 public class EmailDispatcher implements DispatchConfig{
     private String subject;
+    private static final Logger logger = Logger.getLogger("AutoGeneration");
 
     public EmailDispatcher(String subject) {
         this.subject = subject;
@@ -9,6 +12,6 @@ public class EmailDispatcher implements DispatchConfig{
 
     @Override
     public void dispatch() {
-        System.out.println(subject);
+        logger.info(subject);
     }
 }

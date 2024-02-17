@@ -4,8 +4,38 @@
         "eventType": "PAYMENT_EXCEPTION",
         "alertConfig": {
             "type": "TUMBLING_WINDOW", 
+            "count": 3,
+            "windowSizeInSecs": 1200
+        },
+        "dispatchStrategyList": [{
+            "type": "CONSOLE",
+            "message" : "issue in payment tumbling" 
+        }, {
+            "type": "EMAIL",
+            "subject" : "payment exception threshold breached tumbling"
+        }]
+    },{
+        "client": "X",
+        "eventType": "USERSERVICE_EXCEPTION", 
+        "alertConfig": {
+            "type": "SIMPLE_COUNT", 
             "count": 10,
             "windowSizeInSecs": 10
+        },
+        "dispatchStrategyList": [{ 
+            "type": "CONSOLE",
+            "message" : "issue in user service" 
+        }, {
+            "type": "EMAIL",
+            "subject" : "payment exception threshold breached"
+        }]
+    },{
+        "client": "Y",
+        "eventType": "PAYMENT_EXCEPTION",
+        "alertConfig": {
+            "type": "SLIDING_WINDOW", 
+            "count": 10,
+            "windowSizeInSecs": 600
         },
         "dispatchStrategyList": [{
             "type": "CONSOLE",
@@ -13,18 +43,6 @@
         }, {
             "type": "EMAIL",
             "subject" : "payment exception threshold breached"
-        }]
-    },{
-        "client": "X",
-        "eventType": "USERSERVICE_EXCEPTION", 
-        "alertConfig": {
-            "type": "SLIDING_WINDOW", 
-            "count": 10,
-            "windowSizeInSecs": 10
-        },
-        "dispatchStrategyList": [{ 
-            "type": "CONSOLE",
-            "message" : "issue in user service" 
         }]
     }]
 }

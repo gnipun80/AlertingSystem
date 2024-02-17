@@ -37,10 +37,10 @@ public class ServiceInit {
             List<DispatchConfig> dispatchConfigList = new ArrayList<>();
             for (DispatchStrategy dispatchStrategy : configEntry.getDispatchStrategyList()) {
                 if (dispatchStrategy.getType() == DispatchType.EMAIL) {
-                    dispatchConfigList.add(new EmailDispatcher(dispatchStrategy.getSubject()));
+                    dispatchConfigList.add(new EmailDispatcher(client.getName() + " " + dispatchStrategy.getSubject()));
                 }
                 else {
-                    dispatchConfigList.add(new ConsoleDispatch(dispatchStrategy.getMessage()));
+                    dispatchConfigList.add(new ConsoleDispatch(client.getName() + " " + dispatchStrategy.getMessage()));
                 }
             }
             AlertConfig alertConfig = null;
