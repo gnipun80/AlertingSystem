@@ -1,24 +1,30 @@
 package AlertSystem.service.Alert;
 
-import AlertSystem.service.EventInfo;
-
+import java.time.LocalDateTime;
+import java.time.ZoneOffset;
 import java.util.List;
+
+import AlertSystem.service.Event.EventInfo;
 
 public class TumblingWindow extends AlertConfig{
     private int windowSizeInSecs;
 
     @Override
-    boolean process(List<EventInfo> eventList) {
+    public boolean process(List<EventInfo> eventList) {
         // Get current time
         LocalDateTime currentTime = LocalDateTime.now();
 
         // Calculate start time of the current window
-        LocalDateTime windowStart = currentTime - (currentTime % windowSizeInSecs);
+        long windowStart = currentTime.minusSeconds(currentTime.getSecond())
+                                               .minusNanos(currentTime.getNano())
+                                               .minusMinutes(currentTime.getMinute() % (windowSizeInSecs / 60))
+                                               .toEpochSecond(ZoneOffset.UTC);
+        int eventCount = eventList.size();
 
         if(eventCount > this.threshold) {
             int lastEventTime = eventList.get(eventCount - 1 - threshold).getEventTime();
             if(lastEventTime >= windowStart) { // threshold breach
-                return true
+                return true;
             }
         }
         return false;

@@ -1,4 +1,4 @@
-package AlertSystem.service;
+package AlertSystem.service.Event;
 
 import AlertSystem.service.Alert.AlertConfig;
 import AlertSystem.service.Dispatcher.DispatchConfig;
@@ -7,7 +7,7 @@ import java.util.List;
 
 public class EventConfig {
     private String type;
-    private List<AlertSystem.service.EventInfo> EventInfo;
+    private List<AlertSystem.service.Event.EventInfo> EventInfo;
     private AlertConfig alertConfig;
     private List<DispatchConfig> dispatchConfigList;
 
@@ -19,11 +19,11 @@ public class EventConfig {
         this.type = type;
     }
 
-    public List<AlertSystem.service.EventInfo> getEventInfo() {
+    public List<AlertSystem.service.Event.EventInfo> getEventInfo() {
         return EventInfo;
     }
 
-    public void setEventInfo(List<AlertSystem.service.EventInfo> eventInfo) {
+    public void setEventInfo(List<AlertSystem.service.Event.EventInfo> eventInfo) {
         EventInfo = eventInfo;
     }
 
@@ -45,7 +45,7 @@ public class EventConfig {
 
     public void addEvent(EventInfo event) {
         EventInfo.add(event);
-        bool isThresholdBreach = alertConfig.process(EventInfo);
+        boolean isThresholdBreach = alertConfig.process(EventInfo);
 
         if(true == isThresholdBreach) {
             for(DispatchConfig d : dispatchConfigList) {

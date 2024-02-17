@@ -9,5 +9,5 @@ public abstract class AlertConfig {
     public int threshold;
     public ConfigType type;
 
-    abstract boolean process(List<EventInfo> eventList);
+    public abstract boolean process(List<EventInfo> eventList);
 }

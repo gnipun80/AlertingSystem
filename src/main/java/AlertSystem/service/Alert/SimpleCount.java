@@ -1,8 +1,8 @@
 package AlertSystem.service.Alert;
 
-import AlertSystem.service.EventInfo;
-
 import java.util.List;
+
+import AlertSystem.service.Event.EventInfo;
 
 public class SimpleCount extends AlertConfig {
     @Override

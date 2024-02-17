@@ -1,4 +1,4 @@
-package AlertSystem.service;
+package AlertSystem.service.Event;
 
 public class EventInfo {
     private int eventTime;

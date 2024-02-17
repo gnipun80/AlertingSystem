@@ -2,6 +2,8 @@ package AlertSystem.service;
 
 import java.util.Map;
 
+import AlertSystem.service.Event.EventConfig;
+
 public class Client {
     private String name;
 
