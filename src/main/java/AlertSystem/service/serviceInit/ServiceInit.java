@@ -28,7 +28,6 @@ public class ServiceInit {
         Map<String, Client> clientMap = new HashMap<String, Client>();
 
         for (Config configEntry : configList) {
-            // Get or create client
             Client client = clientMap.get(configEntry.getClient());
             if (client == null) {
                 client = new Client(configEntry.getClient());
@@ -58,7 +57,7 @@ public class ServiceInit {
         }
 
         // Initialize service with the clients
-        Service service = new Service(new ArrayList<>(clientMap.values()));
+        Service service = new Service(clientMap);
         return service;
     }
 }

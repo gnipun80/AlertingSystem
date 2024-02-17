@@ -1,0 +1,154 @@
+{
+    "allEvents": [
+        {
+            "ingestedTime": "1633024800",
+            "eventType": "USERSERVICE_EXCEPTION",
+            "clientName": "X"
+        },
+        {
+            "ingestedTime": "1633024860",
+            "eventType": "PAYMENT_EXCEPTION",
+            "clientName": "Y"
+        },
+        {
+            "ingestedTime": "1633024920",
+            "eventType": "USERSERVICE_EXCEPTION",
+            "clientName": "X"
+        },
+        {
+            "ingestedTime": "1633024980",
+            "eventType": "PAYMENT_EXCEPTION",
+            "clientName": "Y"
+        },
+        {
+            "ingestedTime": "1633025040",
+            "eventType": "USERSERVICE_EXCEPTION",
+            "clientName": "X"
+        },
+        {
+            "ingestedTime": "1633025100",
+            "eventType": "PAYMENT_EXCEPTION",
+            "clientName": "Y"
+        },
+        {
+            "ingestedTime": "1633025160",
+            "eventType": "USERSERVICE_EXCEPTION",
+            "clientName": "X"
+        },
+        {
+            "ingestedTime": "1633025220",
+            "eventType": "PAYMENT_EXCEPTION",
+            "clientName": "Y"
+        },
+        {
+            "ingestedTime": "1633025280",
+            "eventType": "USERSERVICE_EXCEPTION",
+            "clientName": "X"
+        },
+        {
+            "ingestedTime": "1633025340",
+            "eventType": "PAYMENT_EXCEPTION",
+            "clientName": "Y"
+        },
+        {
+            "ingestedTime": "1633025400",
+            "eventType": "USERSERVICE_EXCEPTION",
+            "clientName": "X"
+        },
+        {
+            "ingestedTime": "1633025460",
+            "eventType": "PAYMENT_EXCEPTION",
+            "clientName": "Y"
+        },
+        {
+            "ingestedTime": "1633025520",
+            "eventType": "USERSERVICE_EXCEPTION",
+            "clientName": "X"
+        },
+        {
+            "ingestedTime": "1633025580",
+            "eventType": "PAYMENT_EXCEPTION",
+            "clientName": "Y"
+        },
+        {
+            "ingestedTime": "1633025640",
+            "eventType": "USERSERVICE_EXCEPTION",
+            "clientName": "X"
+        },
+        {
+            "ingestedTime": "1633025700",
+            "eventType": "PAYMENT_EXCEPTION",
+            "clientName": "Y"
+        },
+        {
+            "ingestedTime": "1633025760",
+            "eventType": "USERSERVICE_EXCEPTION",
+            "clientName": "X"
+        },
+        {
+            "ingestedTime": "1633025820",
+            "eventType": "PAYMENT_EXCEPTION",
+            "clientName": "Y"
+        },
+        {
+            "ingestedTime": "1633025880",
+            "eventType": "USERSERVICE_EXCEPTION",
+            "clientName": "X"
+        },
+        {
+            "ingestedTime": "1633025940",
+            "eventType": "PAYMENT_EXCEPTION",
+            "clientName": "Y"
+        },
+        {
+            "ingestedTime": "1633026000",
+            "eventType": "USERSERVICE_EXCEPTION",
+            "clientName": "X"
+        },
+        {
+            "ingestedTime": "1633026060",
+            "eventType": "PAYMENT_EXCEPTION",
+            "clientName": "Y"
+        },
+        {
+            "ingestedTime": "1633026120",
+            "eventType": "USERSERVICE_EXCEPTION",
+            "clientName": "X"
+        },
+        {
+            "ingestedTime": "1633026180",
+            "eventType": "PAYMENT_EXCEPTION",
+            "clientName": "Y"
+        },
+        {
+            "ingestedTime": "1633026240",
+            "eventType": "USERSERVICE_EXCEPTION",
+            "clientName": "X"
+        },
+        {
+            "ingestedTime": "1633026300",
+            "eventType": "PAYMENT_EXCEPTION",
+            "clientName": "Y"
+        },
+        {
+            "ingestedTime": "1633026360",
+            "eventType": "USERSERVICE_EXCEPTION",
+            "clientName": "X"
+        },
+        {
+            "ingestedTime": "1633026420",
+            "eventType": "PAYMENT_EXCEPTION",
+            "clientName": "Y"
+        },
+        {
+            "ingestedTime": "1633026480",
+            "eventType": "USERSERVICE_EXCEPTION",
+            "clientName": "X"
+        },
+        {
+            "ingestedTime": "1633026540",
+            "eventType": "PAYMENT_EXCEPTION",
+            "clientName": "Y"
+        }
+    ]
+}
