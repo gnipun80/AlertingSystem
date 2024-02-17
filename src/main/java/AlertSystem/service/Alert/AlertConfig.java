@@ -1,12 +1,13 @@
 package AlertSystem.service.Alert;
 
-import AlertSystem.service.EventInfo;
-
 import java.util.List;
+
+import AlertSystem.Enums.ConfigType;
+import AlertSystem.service.Event.EventInfo;
 
 public abstract class AlertConfig {
     public int threshold;
-    public String type;
+    public ConfigType type;
 
     abstract boolean process(List<EventInfo> eventList);
 }
